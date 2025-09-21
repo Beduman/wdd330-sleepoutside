@@ -26,12 +26,12 @@ export default class ProductDetails {
     render() {
       this.renderProductDetails(this.product);
     }
-    renderProductDetails(product) {
-        document.getElementById('productPrice').textContent = `$${product.FinalPrice.toFixed(2)}`;
-        document.getElementById('productColor').textContent = product.Colors[0].ColorName;
-        document.getElementById('productDesc').innerHTML = product.DescriptionHtmlSimple;
-        document.querySelector('h2').textContent = product.Brand.Name;
-        document.querySelector('h1').textContent = product.Name;
+     renderProductDetails(product) {
+        document.getElementsByClassName('product-card__price')[0].textContent = product.FinalPrice;
+        document.getElementsByClassName('product__color')[0].textContent = product.Colors[0].ColorName;
+        document.getElementsByClassName('product__description')[0].innerHTML = product.DescriptionHtmlSimple;
+        document.querySelector('h3').textContent = product.Brand.Name;
+        document.querySelector('h2').textContent = product.Name;
 
         const productImage = document.getElementById('productImage');
         productImage.src = product.Image
