@@ -10,13 +10,4 @@ const product = new ProductDetails(productId, dataSource);
 product.init();
 
 
-// add to cart button event handler
-async function addToCartHandler(e) {
-  const products = await dataSource.findProductById(e.target.dataset.id);
-  addProductToCart(products);
-}
 
-// add listener to Add to Cart button
-document
-  .getElementById('addToCart')
-  .addEventListener('click', addToCartHandler);

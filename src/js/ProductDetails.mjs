@@ -19,7 +19,7 @@ export default class ProductDetails {
 
     addProductToCart(product) {
       let cart = JSON.parse(localStorage.getItem('so-cart')) || [];
-      cart.push(product);
+      cart.push(this.product);
       localStorage.setItem('so-cart', JSON.stringify(cart));
     }
 
