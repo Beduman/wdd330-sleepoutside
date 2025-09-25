@@ -18,9 +18,9 @@ export default class ProductDetails {
   }
 
     addProductToCart(product) {
-      let cart = JSON.parse(localStorage.getItem("so-cart")) || [];
+      let cart = JSON.parse(localStorage.getItem('so-cart')) || [];
       cart.push(product);
-      localStorage.setItem("so-cart", JSON.stringify(cart));
+      localStorage.setItem('so-cart', JSON.stringify(cart));
     }
 
     render() {
