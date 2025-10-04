@@ -22,4 +22,6 @@ const product = new ProductDetails(productId, dataSource);
 product.init();
 
 
-
+document
+  .getElementById("addToCart")
+  .addEventListener("click", addToCartHandler);
